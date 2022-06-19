@@ -8,7 +8,13 @@ public class MainClassTest extends MainClass {
         Assert.assertTrue("Тест не равен 14",this.getLocalNumber() == 14);
     }
 
-    @Test public void testGetClassNumber() {
+    @Test
+    public void testGetClassNumber() {
         Assert.assertTrue("Тестовое значение равно не больше 45",this.getClassNumber() > 45);
+    }
+    @Test
+    public void testGetClassString () {
+        String testStr = "hello";
+        Assert.assertTrue("Строка не содержит 'hello'", getClassString().toLowerCase().contains(testStr));
     }
 }
