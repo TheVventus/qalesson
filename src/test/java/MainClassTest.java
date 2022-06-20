@@ -14,7 +14,12 @@ public class MainClassTest extends MainClass {
     }
     @Test
     public void testGetClassString () {
-        String testStr = "hello";
-        Assert.assertTrue("Строка не содержит 'hello'", getClassString().toLowerCase().contains(testStr));
+        String testStr1 = "hello";
+        String testStr2 = "Hello";
+        if (this.getClassString().contains(testStr1) || this.getClassString().contains(testStr2)) {
+            System.out.println("Строка не содержит 'hello'  или 'Hello'");
+        } else {
+            Assert.fail("Строка не содержит 'hello'  или 'Hello'");
+        }
     }
 }
